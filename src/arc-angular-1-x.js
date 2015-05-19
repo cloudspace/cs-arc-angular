@@ -1,4 +1,4 @@
-var Arc     = require('./arc.js');
+var Arc     = require('cs-arc');
 var angular = require('angular');
 var d3      = require('d3');
 
