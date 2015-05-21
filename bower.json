@@ -1,0 +1,21 @@
+{
+  "name": "cs-arc-angualar",
+  "version": "0.0.1",
+  "authors": [
+    "cmclean@cloudspace.com"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "main": [
+    "./cs-arc-angular.min.js"
+  ],
+  "dependencies": {
+    "angular": "~1.3.*"
+  }
+}

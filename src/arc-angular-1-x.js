@@ -1,6 +1,4 @@
-var Arc     = require('cs-arc');
-var angular = require('angular');
-var d3      = require('d3');
+var Arc = require('cs-arc');
 
 var AngularConnector = angular
   .module('csArc', [])
@@ -24,15 +22,15 @@ var AngularConnector = angular
       controllerAs: 'csArc',
       controller: [function() {
         this.translate = 'translate(' + (this.width()/2) + ',' + (this.width()/2) + ')';
-        
+
         this.initArc = function(args) {
           this.arc = new Arc(args);
         };
-       
+
         this.renderArc = function() {
-          this.arc.render();  
+          this.arc.render();
         };
-       
+
         this.updateArc = function(percent) {
           this.arc.update(percent);
         };
@@ -46,9 +44,9 @@ var AngularConnector = angular
             end: ctrl.end(),
             transition: ctrl.transition(),
             container: ctrl.container(),
-            name: ctrl.name()  
+            name: ctrl.name()
           });
-          
+
           d3
             .select('#' + ctrl.container())
             .attr('width', ctrl.width())
@@ -62,5 +60,5 @@ var AngularConnector = angular
       template: '<svg id="{{ csArc.container() }}"><g></g></svg>'
     };
   }]);
-  
+
 module.exports = AngularConnector;
